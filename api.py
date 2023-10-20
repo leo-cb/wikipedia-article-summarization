@@ -4,7 +4,6 @@ from summarize_wikipedia import get_wikipedia_text
 from starlette.status import HTTP_403_FORBIDDEN
 import os
 import hashlib
-import hmac
 
 # initialize fast api
 app = FastAPI()
@@ -27,6 +26,7 @@ def get_api_key(api_key_header: str = Header(None)):
     """
 
     if api_key_header is None:
+        print("No api_key_header.")
         raise HTTPException(
             status_code=HTTP_403_FORBIDDEN, detail="Could not validate credentials"
         )
@@ -37,12 +37,13 @@ def get_api_key(api_key_header: str = Header(None)):
     if api_keys is not None:
         api_keys = api_keys.split(";")
     else:
+        print("No api keys.")
         raise HTTPException(
             status_code=HTTP_403_FORBIDDEN, detail="Could not validate credentials"
         )
 
     # get salt
-    salt = os.getenv("SALT")
+    salt = os.getenv("SUMMARIZE_SALT")
 
     if salt is None:
         raise HTTPException(

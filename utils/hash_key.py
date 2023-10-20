@@ -7,4 +7,4 @@ def hash_key(key,salt=""):
 if __name__ == "__main__":
     key = sys.argv[1]
     salt = sys.argv[2]
-    print(hash_key(key))
+    print(hash_key(key,salt))
