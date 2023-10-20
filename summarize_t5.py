@@ -53,12 +53,18 @@ class TextSummarization:
 
             summaries.append(summary)
 
-        final_summary = remove_duplicates(' '.join(summaries))
+        summaries_nodup = remove_duplicates(' '.join(summaries))
 
         # Check if the last sentence ends with . ! or ?
-        sentences = re.split('(?<=[.!?]) +', final_summary)
+        sentences = re.split('(?<=[.!?]) +', summaries_nodup)
+
+        # capitalize sentences
+        sentences = [sentence.capitalize() for sentence in sentences]
+
         if sentences[-1][-1] not in ['.', '!', '?']:
             final_summary = ' '.join(sentences[:-1])
+        else:
+            final_summary = ' '.join(sentences)
 
         return final_summary
     
