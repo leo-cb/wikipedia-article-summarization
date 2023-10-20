@@ -15,8 +15,8 @@ summarizer = load_summarizer()
 
 # create form
 with st.form(key='summarize_form'):
-    url = st.text_input('Enter the URL of the Wikipedia page')
-    limit = st.number_input('Enter the character limit', value=1000, min_value=500)
+    url = st.text_input('Enter the URL of the english Wikipedia page:',value="https://en.wikipedia.org/wiki/PageRank")
+    limit = st.number_input('Enter the character limit:', value=1000, min_value=500, max_value = 10000)
     submit_button = st.form_submit_button(label='Summarize')
 
 # when the form is submitted
