@@ -1,5 +1,5 @@
 # wikipedia-article-summarization
-Summarizes Wikipedia articles with Google's T5 model. You can execute it through a Python script, access it through a fast API's REST API or through a streamlit web page.  
+Summarizes Wikipedia articles with transformers T5 model. You can execute it through a Python script, access it through a fast API's REST API or through a streamlit web page.  
 You can access a live web page <a href="http://149.56.100.90:8502/">here</a>.
 
 ## Installing
