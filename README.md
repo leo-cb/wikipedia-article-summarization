@@ -9,7 +9,7 @@ You can access a live web page <a href="http://149.56.100.90:8502/">here</a>.
 pip install -r requirements.txt
 ```
 
-2 (optional). Install Docker if you wish to run the web application in a Docker container.
+2 (optional). Install Docker if you wish to run the web application in a Docker container. You can skip 1. if that is the only application you wish to execute.
 
 ## Usage
 
