@@ -2,6 +2,8 @@
 Summarizes Wikipedia articles with transformers T5 model. You can execute it through a Python script, access it through a fast API's REST API or through a streamlit web page.  
 You can access a live web page <a href="http://149.56.100.90:8502/">here</a>.
 
+<img style="width:75%" src="https://raw.githubusercontent.com/leo-cb/wikipedia-article-summarization/main/images/webapp.png"/>
+
 ## Installing
 
 1. Install requirements
